@@ -35,9 +35,13 @@ Replace "Input_01.txt" with the path to your desired input file.
 3. Solution class: Uses the Trie to find the longest compound words from the input file.
 4. main() function: Initializes Solution, builds the Trie, and displays the longest compound words found.
 
-*//* File Structure *//*
+*//* Approach *//*
 
-1. main.cpp: Contains the source code for the Trie implementation and compounded word finder logic.
-2. Input_01.txt: Sample input file containing a small word list.
-3. Input_02.txt: Sample input file containing a long word list, consisting 100,000+ items.
+1. Trie Implementation: The program uses a Trie data structure for efficient word storage and retrieval.
+2. Building the Trie: Words from the input file are inserted into the Trie, and prefixes are extracted to identify potential compound words.
+3. Compound Word Search: The program then iterates through combinations of words and their suffixes, checking their existence in the Trie to identify the longest compound words.
 
+*//* Design Decisions *//*
+
+1. Trie Structure: The Trie facilitates quick prefix retrieval and word existence checks, optimizing the search for compound words.
+2. Queue Usage: A deque (double-ended queue) is employed to manage word combinations efficiently during the search process.
